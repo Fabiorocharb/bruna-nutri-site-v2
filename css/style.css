@@ -84,14 +84,14 @@ em { color: var(--rose); font-style: normal; }
 .hero-meta { display: flex; flex-wrap: wrap; gap: 13px 26px; list-style: none; padding: 0; margin: 18px 0 0; font-size: 13px; }
 .hero-meta li { display: flex; gap: 8px; align-items: center; }
 .hero-meta .icon { color: var(--wine); width: 20px; height: 20px; }
-.hero-note { position: absolute; right: 5%; top: 76px; color: #fff6eb; font-size: 36px; text-align: center; transform: rotate(-8deg); text-shadow: 0 2px 10px #30201980; }
+.hero-note { position: absolute; right: 5%; top: 76px; color: var(--wine); font-size: 36px; text-align: center; transform: rotate(-8deg); text-shadow: 0 1px 8px #fffaf8cc; }
 .hero-note .icon { display: block; margin: 9px auto 0; width: 29px; height: 29px; }
 .professional-card { position: absolute; bottom: 53px; left: 67%; padding: 15px 24px; border: 1px solid #fff8; border-radius: 16px; background: #fff5efd9; backdrop-filter: blur(10px); display: flex; flex-direction: column; box-shadow: 0 8px 24px #32181810; }
 .professional-card strong { font: 500 18px/1.4 var(--font-heading); }
 .professional-card span { font-size: 12px; }
-.scroll-cue { position: absolute; right: 0; bottom: 58px; display: flex; flex-direction: column; align-items: center; gap: 9px; color: white; }
+.scroll-cue { position: absolute; right: 0; bottom: 58px; display: flex; flex-direction: column; align-items: center; gap: 9px; color: var(--wine); }
 .scroll-cue span { font-size: 10px; letter-spacing: .1em; text-transform: uppercase; }
-.scroll-cue .icon { width: 48px; height: 48px; padding: 12px; border: 1px solid #fff9; border-radius: 50%; }
+.scroll-cue .icon { width: 48px; height: 48px; padding: 12px; border: 1px solid currentColor; border-radius: 50%; background: #fff5efd9; }
 .botanical { position: absolute; pointer-events: none; color: #c77d8350; z-index: -1; }
 .botanical-hero { left: -66px; top: 120px; transform: rotate(-58deg); }
 .botanical .icon { width: 180px; height: 180px; stroke-width: .65; }
@@ -242,6 +242,7 @@ body.dialog-open { overflow: hidden; }
   .brand-copy strong { font-size: 20px; }
   .brand-copy small { font-size: 8px; }
   .hero-content { min-height: 540px; }
+  .hero-photo img { object-position: 25% center; }
   .hero-copy { width: 51%; }
   .hero-copy h1 { font-size: 43px; }
   .hero-actions { gap: 9px; }
@@ -298,7 +299,8 @@ body.dialog-open { overflow: hidden; }
   .hero-actions { flex-direction: column; align-items: flex-start; gap: 10px; }
   .hero-actions .btn { min-width: 218px; }
   .hero-photo { width: 59%; }
-  .hero-note { font-size: 29px; right: 1%; top: 90px; }
+  .hero-photo img { object-position: 20% center; }
+  .hero-note { display: none; }
   .hero-meta { font-size: 12px; gap: 10px 16px; }
   .professional-card { left: 62%; bottom: 60px; }
   .about-grid { grid-template-columns: 1.15fr 1fr; gap: 28px; }

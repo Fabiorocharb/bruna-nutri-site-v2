@@ -22,19 +22,19 @@ O link de compartilhamento que anteriormente aparecia como WhatsApp foi removido
 
 Os cartões de palestras abrem a descrição do tema. Não simulam vídeos com durações fictícias. Para disponibilizar um vídeo, preencha a URL HTTPS de um MP4/WebM no campo correspondente de `videos`; o diálogo carregará o player nativo sob demanda.
 
-Números de atendimento e depoimentos foram preservados da referência e precisam ser validados antes da publicação. As fotografias são ilustrações provisórias, não comprovação da identidade da profissional ou do local.
+Números de atendimento e depoimentos foram preservados da referência e precisam ser validados antes da publicação. A foto principal usa o retrato fornecido da Dra. Bruna, com blazer editado para rosa e fundo ampliado por IA. As demais fotografias são ilustrações provisórias, não comprovação da identidade da profissional ou do local.
 
 ## Trocar as fotos
 
 Substitua os arquivos abaixo mantendo os nomes. Não é necessário editar estilos nem remover atributos especiais:
 
-- `hero-clean.webp`: foto horizontal principal (1536 × 1024 recomendado).
+- `hero-bruna-rose.webp`: foto horizontal principal (1536 × 1024), baseada no retrato fornecido, com blazer rosa. O PNG correspondente é o original da edição; o arquivo anterior `hero-clean.webp` foi preservado.
 - `about-clean.webp`: retrato da apresentação (quadrado ou vertical).
 - `clinic-clean.webp`: foto do consultório.
 - `lecture-clean.webp`: foto provisória dos três temas; cada `src` pode ser alterado separadamente no HTML.
 - `family-placeholder.webp`: fotografia de família.
 
-As imagens principais estão em WebP e somam aproximadamente 386 KB. Os PNGs correspondentes são originais de edição; não são carregados pela página. Os antigos recortes do mockup permanecem na pasta, mas não são usados pela interface (exceto a fotografia de família, que não contém controles).
+As imagens principais estão em WebP; a foto principal tem aproximadamente 97 KB. Os PNGs correspondentes são originais de edição; não são carregados pela página. Os antigos recortes do mockup permanecem na pasta, mas não são usados pela interface (exceto a fotografia de família, que não contém controles).
 
 ## Ícones
 
