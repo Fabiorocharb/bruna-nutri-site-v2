@@ -91,7 +91,13 @@ if (config.address) {
   document.querySelector('[data-address]').textContent = config.address;
   const map = document.querySelector('[data-location]');
   externalLink(map, config.mapsUrl || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(config.address)}`);
-  map.firstChild.textContent = 'Ver no Google Maps ';
+  map.firstChild.textContent = 'Como chegar ';
+  if (config.mapsEmbedUrl) {
+    const mapFrame = document.querySelector('[data-map-frame]');
+    mapFrame.src = config.mapsEmbedUrl;
+    mapFrame.hidden = false;
+    document.querySelector('#location-panel').classList.add('has-map');
+  }
 }
 document.querySelectorAll('[data-inquiry]').forEach(link => {
   if (hasWhatsapp) externalLink(link, contactUrl('palestra'));
@@ -103,15 +109,15 @@ const serviceDetails = {
     text: 'Um acompanhamento que considera a história, as preferências e a rotina de cada criança. O cuidado nutricional é individualizado e construído em parceria com a família.',
     items: ['Escuta da família e avaliação da rotina alimentar.', 'Objetivos possíveis para o dia a dia.', 'Acompanhamento respeitoso em cada etapa.']
   },
-  seletividade: {
-    title: 'Seletividade alimentar',
-    text: 'Ampliar o repertório alimentar pode ser um processo delicado. A proposta é compreender as dificuldades da criança e construir novas experiências com acolhimento e sem pressão.',
-    items: ['Compreensão das preferências e desafios nas refeições.', 'Orientações adaptadas à realidade da família.', 'Respeito ao ritmo e à individualidade da criança.']
+  terapia: {
+    title: 'Terapia alimentar',
+    text: 'Como terapeuta alimentar, acolho a seletividade, a recusa e as dificuldades nas refeições. O trabalho propõe uma aproximação gradual com os alimentos, respeitando o ritmo da criança e construindo novas experiências junto à família.',
+    items: ['Compreensão da história alimentar, das preferências e dos desafios.', 'Exploração de alimentos, texturas e sabores sem pressão.', 'Orientações para dar continuidade às descobertas no dia a dia.']
   },
-  alimentacao: {
-    title: 'Dificuldades alimentares',
-    text: 'Quando as refeições se tornam um desafio, a família também precisa de apoio. A consulta é um espaço de escuta para compreender a situação e planejar o cuidado.',
-    items: ['Avaliação da história alimentar e da rotina.', 'Estratégias individualizadas para as refeições.', 'Acompanhamento dos próximos passos com a família.']
+  suplementacao: {
+    title: 'Suplementação alimentar',
+    text: 'Cada criança tem necessidades próprias. O acompanhamento inclui avaliar a alimentação, o histórico e, quando necessário, os exames para entender se há indicação de suplementação e orientar esse cuidado de forma individualizada.',
+    items: ['Avaliação das necessidades nutricionais e da rotina alimentar.', 'Orientação sobre suplementação quando indicada na avaliação.', 'Acompanhamento e reavaliação ao longo do cuidado.']
   },
   familias: {
     title: 'Orientação para famílias',

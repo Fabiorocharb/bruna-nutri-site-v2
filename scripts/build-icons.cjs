@@ -1,7 +1,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const root = path.resolve(__dirname, '..');
-const names = ['calendar-days','arrow-up-right','arrow-right','arrow-down','chevron-up','brain','puzzle','apple','users-round','heart','heart-handshake','video','chart-no-axes-combined','leaf','map-pin','phone','mail','star','menu','x','play'];
+const names = ['calendar-days','arrow-up-right','arrow-right','arrow-down','chevron-up','brain','puzzle','apple','pill','users-round','heart','heart-handshake','video','chart-no-axes-combined','leaf','map-pin','phone','mail','star','menu','x','play'];
 let symbols = '';
 for (const name of names) {
   const svg = fs.readFileSync(path.join(root, 'node_modules/lucide-static/icons', name+'.svg'), 'utf8');
