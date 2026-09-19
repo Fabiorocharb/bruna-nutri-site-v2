@@ -189,7 +189,7 @@ function initializeCounters() {
   if (!stats || !counters.length || reducedMotion.matches || !('IntersectionObserver' in window)) return;
 
   let frame = 0;
-  const duration = 1600;
+  const duration = 3200;
   const format = new Intl.NumberFormat('pt-BR');
   const render = (counter, value) => {
     counter.textContent = `+${format.format(value)}${counter.dataset.suffix || ''}`;
